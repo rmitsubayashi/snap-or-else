@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Snap Or Else</string>
+    <!--menu-->
+    <string name="challenge_details_export">Export</string>
+    <string name="challenge_details_delete">Delete</string>
+    <string name="challenge_details_set_frame_rate">Frame Rate</string>
+    <string name="challenge_details_edit_photos">Edit Photos</string>
+    <string name="photo_details_delete">Delete</string>
+    <string name="photo_details_rotate">Rotate</string>
+    <string name="photo_details_save">Save</string>
+    <!-- what goes on the app bar -->
+    <string name="add_challenge_fragment_label">Add</string>
+    <string name="challenge_list_fragment_label">Challenges</string>
+    <string name="challenge_details_fragment_label">Challenge Details</string>
+    <string name="challenge_failed_fragment_label">Failed..</string>
+    <string name="photo_list_fragment_label">Photos</string>
+    <string name="photo_details_fragment_label">Edit</string>
+
+
+    <string name="hardcore_description">In hardcore mode, your photos will be deleted if you miss a day. Of course, you can set cheat days in case you forget a day</string>
+</resources>

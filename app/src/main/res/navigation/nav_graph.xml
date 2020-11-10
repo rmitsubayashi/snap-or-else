@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ChallengeListFragment">
+
+    <fragment
+        android:id="@+id/ChallengeListFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.challengelist.ChallengeListFragment"
+        android:label="@string/challenge_list_fragment_label"
+        tools:layout="@layout/fragment_challenge_list">
+
+        <action
+            android:id="@+id/action_ChallengeListFragment_to_ChallengeDetailsFragment"
+            app:destination="@id/ChallengeDetailsFragment" />
+        <action
+            android:id="@+id/action_ChallengeListFragment_to_AddChallengeFragment"
+            app:destination="@id/AddChallengeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddChallengeFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.addchallenge.AddChallengeFragment"
+        android:label="@string/add_challenge_fragment_label"
+        tools:layout="@layout/fragment_add_challenge">
+        <action
+            android:id="@+id/action_AddChallengeFragment_to_ChallengeListFragment"
+            app:destination="@id/ChallengeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ChallengeDetailsFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.challengedetails.ChallengeDetailsFragment"
+        android:label="@string/challenge_details_fragment_label">
+        <argument
+            android:name="ChallengeID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_ChallengeDetailsFragment_to_challengeFailedFragment"
+            app:destination="@id/challengeFailedFragment"
+            app:popUpTo="@id/ChallengeListFragment" />
+        <action
+            android:id="@+id/action_ChallengeDetailsFragment_to_ChallengeListFragment"
+            app:destination="@id/ChallengeListFragment" />
+        <action
+            android:id="@+id/action_ChallengeDetailsFragment_to_photoListFragment"
+            app:destination="@id/PhotoListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengeFailedFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.challengefailed.ChallengeFailedFragment"
+        android:label="@string/challenge_failed_fragment_label">
+        <argument
+            android:name="ChallengeID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_challengeFailedFragment_to_ChallengeListFragment"
+            app:destination="@id/ChallengeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/PhotoListFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.photolist.PhotoListFragment"
+        android:label="@string/photo_list_fragment_label">
+        <action
+            android:id="@+id/action_photoListFragment_to_photoDetailsFragment"
+            app:destination="@id/PhotoDetailsFragment" />
+        <argument
+            android:name="ChallengeID"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/PhotoDetailsFragment"
+        android:name="com.github.rmitsubayashi.snaporelse.view.photodetails.PhotoDetailsFragment"
+        android:label="@string/photo_details_fragment_label">
+        <argument
+            android:name="PhotoID"
+            app:argType="integer" />
+        <argument
+            android:name="PhotoFilePath"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_PhotoDetailsFragment_to_PhotoListFragment"
+            app:destination="@id/PhotoListFragment"
+            app:popUpTo="@id/PhotoListFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="GlidePhotoKey"
+            app:argType="java.time.LocalDateTime" />
+    </fragment>
+</navigation>

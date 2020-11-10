@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dayPressed">@color/colorAccent</color>
+    <color name="daySelected">@color/colorAccentDark</color>
+    <color name="dayDeselectedTextColor">@color/colorAccent</color>
+</resources>

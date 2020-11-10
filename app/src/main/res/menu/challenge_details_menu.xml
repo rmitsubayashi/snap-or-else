@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_export_challenge_details"
+        android:title="@string/challenge_details_export" />
+    <item
+        android:id="@+id/action_edit_challenge_details"
+        android:title="@string/challenge_details_edit_photos"/>
+    <item
+        android:id="@+id/action_set_frame_rate"
+        android:title="@string/challenge_details_set_frame_rate"/>
+    <item
+        android:id="@+id/action_delete_challenge_details"
+        android:title="@string/challenge_details_delete" />
+</menu>
